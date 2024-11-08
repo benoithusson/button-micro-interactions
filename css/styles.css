@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  --color-primary: rgb(255, 255, 255);
+  --color-secondary: rgb(6, 50, 116);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+ul {
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.header ul li a {
+  color: var(--color-secondary);
+}
+
+/* Generic style */
+.bloc--column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--color-primary);
+}
+
+.bloc {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0 50px;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.bloc__btn {
+  margin: 0 20px;
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+}
+
+/* Animation 1 */
+.bloc__btn--first-animation {
+  color: var(--color-secondary);
+}
+
+.bloc__btn--first-animation:hover {
+  box-shadow: inset 200px 0 0 0 var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* Animation 2 */
+.bloc__btn--second-animation {
+  color: var(--color-secondary);
+}
+
+.bloc__btn--second-animation:hover {
+  box-shadow: 10px 10px 0 0 var(--color-secondary);
+}
+
+/* Animation 3 */
+.bloc__btn--third-animation {
+  color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 0;
+  background-color: var(--color-secondary);
+}
+
+.bloc__btn--third-animation:hover {
+  border: none;
+  box-shadow: none;
+  outline: 2px solid var(--color-primary);
+  outline-offset: -8px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* Animation 4 */
+.bloc__btn--fourth-animation {
+  position: relative;
+  font-size: 1rem;
+  padding: 10px 60px;
+  color: var(--color-secondary);
+}
+
+.bloc__btn--fourth-animation::before,
+.bloc__btn--fourth-animation::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  background-color: var(--color-secondary);
+}
+
+.bloc__btn--fourth-animation::after {
+  top: -10px;
+  left: 0;
+  transform-origin: right;
+}
+
+.bloc__btn--fourth-animation:hover::before {
+  transform: scaleX(1);
+}
+
+.bloc__btn--fourth-animation:hover::after {
+  transform: scaleX(1);
+}
+
+/* Animation 5 */
+.link-container {
+  position: relative;
+  padding: 20px 60px;
+  color: var(--color-secondary);
+}
+
+.link-container:hover {
+  cursor: pointer;
+}
+
+.link-container__border {
+  position: absolute;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: all 0.2s ease-in;
+}
+
+.right {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  background-color: var(--color-secondary);
+  transition: all 0.2s ease-in;
+}
+
+.bottom {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: all 0.2s ease-in;
+}
+
+.left {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: var(--color-secondary);
+  transform-origin: center;
+  transition: all 0.2s ease-in;
+}
+
+.link-container:hover .top {
+  width: 100%;
+}
+
+.link-container:hover .right {
+  height: 100%;
+}
+
+.link-container:hover .bottom {
+  width: 100%;
+}
+
+.link-container:hover .left {
+  height: 100%;
+}
+
+/* Animation 6 */
+.bloc__btn--sixth-animation {
+  border: 1px solid var(--color-secondary);
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+  color: var(--color-secondary);
+}
+
+.bloc__btn--sixth-animation:hover {
+  border-radius: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.bloc__btn--sixth-animation:active,
+.bloc__btn--sixth-animation:focus {
+  color: var(--color-primary);
+  border: 3px solid var(--color-secondary);
+}
+
+/* Animation 7 */
+.bloc__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-brands {
+  color: white;
+}
+
+.bloc__social-icon:hover {
+  transform: translateY(-5px);
+  border-radius: 50%;
+}
